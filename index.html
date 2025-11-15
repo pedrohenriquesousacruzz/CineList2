@@ -1,1 +1,105 @@
-<!DOCTYPE html><html><head><title>CineList</title></head><body></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>CineList</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="topo">
+    <div class="container topo__conteudo">
+      <h1 class="logo">CineList</h1>
+
+      <nav class="menu">
+        <button class="menu__link" data-section="catalogo">Catálogo</button>
+        <button class="menu__link" data-section="equipe">Equipe</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <main class="container">
+
+    <!-- Seção Catálogo -->
+    <section id="sec-catalogo"></section>
+
+      <!-- Feedback -->
+      <div id="feedback" class="feedback">
+        <div id="loading" class="loading escondido">Carregando...</div>
+        <div id="erro" class="erro escondido"></div>
+      </div>
+
+      <!-- Lista de títulos -->
+      <section id="listaTitulos" class="grade-titulos"></section>
+
+      <!-- Paginação -->
+      <nav class="paginacao">
+        <button id="btnPrev" class="botao" disabled>&lt; Anterior</button>
+        <span id="infoPagina">Página 1</span>
+        <button id="btnNext" class="botao">Próxima &gt;</button>
+      </nav>
+
+      <!-- MODAL DE DETALHES -->
+      <section id="detalhesTitulo" class="detalhes escondido">
+
+        <button id="btnFecharDetalhes" class="detalhes__fechar">X</button>
+
+        <div class="detalhes__conteudo">
+
+          <img id="detPoster" src="" alt="Poster" class="detalhes__poster" />
+
+          <div class="detalhes__texto">
+
+            <h3 id="detTitulo"></h3>
+            <p id="detInfoExtra" class="detalhes__info-extra"></p>
+            <p id="detRating" class="detalhes__rating"></p>
+
+            <h4>Sinopse</h4>
+            <p id="detSinopse" class="detalhes__sinopse"></p>
+
+            <!-- Temporadas -->
+            <section id="secTemporadas" class="temporadas escondido">
+              <h4>Temporadas</h4>
+              <ul id="listaTemporadas"></ul>
+
+              <div id="episodiosContainer" class="episodios escondido">
+                <h4>Episódios</h4>
+                <ul id="listaEpisodios"></ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+      </section>
+
+    </section>
+
+ <!-- Equipe -->
+<section id="sec-equipe"></section>
+
+</section>
+
+</section>
+
+
+
+    </section>
+
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape__conteudo">
+      <p>© <span id="anoAtual"></span> — Catálogo TMDB</p>
+      <p>Todos os dados fornecidos pela API The Movie Database</p>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+
+</body>
+</html>
